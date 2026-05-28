@@ -1,0 +1,395 @@
+/* ============================================================
+   RESPONSIVE — адаптивная вёрстка
+   Подход Mobile-Last (Desktop-First) c medía-queries по убыванию
+   ============================================================ */
+
+/* ===== ≤ 1200px — небольшие десктопы ===== */
+@media (max-width: 1200px) {
+    :root {
+        --gutter: 20px;
+    }
+
+    .about__grid {
+        gap: 50px;
+    }
+
+    .faq__grid {
+        gap: 50px;
+    }
+
+    .footer__top {
+        grid-template-columns: 1.4fr 1fr 1fr 1fr;
+        gap: 40px;
+    }
+
+    .nav__list {
+        gap: 24px;
+    }
+
+    .header__phone span {
+        display: none;
+    }
+}
+
+/* ===== ≤ 992px — планшеты ===== */
+@media (max-width: 992px) {
+
+    /* Скрываем десктопную навигацию */
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: min(380px, 90vw);
+        height: 100vh;
+        background: var(--bg);
+        z-index: 1000;
+        padding: 120px 40px 40px;
+        overflow-y: auto;
+        transition: right var(--t-slow) var(--ease);
+        box-shadow: -10px 0 40px rgba(0,0,0,0.1);
+    }
+
+    .nav.is-open {
+        right: 0;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .nav__link {
+        font-size: 20px;
+        color: var(--text);
+        padding: 16px 0;
+        font-family: var(--font-display);
+        font-weight: 500;
+    }
+
+    .nav__submenu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: transparent;
+        padding: 0 0 12px 16px;
+        display: none;
+    }
+
+    .nav__item--dropdown.is-active .nav__submenu {
+        display: block;
+    }
+
+    .nav__sublink {
+        padding: 8px 0;
+        font-size: 15px;
+    }
+
+    .nav__sublink:hover {
+        padding-left: 8px;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .header__actions .btn--primary {
+        display: none;
+    }
+
+    /* Hero */
+    .hero__stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .hero__pager {
+        right: 20px;
+    }
+
+    /* About */
+    .about__grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .about__image img {
+        height: 480px;
+    }
+
+    /* Projects */
+    .projects__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    /* Advantages */
+    .advantages__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Partners */
+    .partners__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* FAQ */
+    .faq__grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    /* Contacts */
+    .contacts__grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Footer */
+    .footer__top {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer__col--brand {
+        grid-column: 1 / -1;
+    }
+
+    /* Sections padding */
+    .about,
+    .projects,
+    .advantages,
+    .partners,
+    .faq,
+    .contacts {
+        padding: 80px 0;
+    }
+}
+
+/* ===== ≤ 768px — большие мобильные ===== */
+@media (max-width: 768px) {
+    :root {
+        --header-h: 72px;
+    }
+
+    .header__logo-sub {
+        display: none;
+    }
+
+    .header__logo-title {
+        font-size: 18px;
+    }
+
+    .header__phone {
+        font-size: 0;
+    }
+
+    .header__phone svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 100svh;
+    }
+
+    .hero__container {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    .hero__title {
+        margin-bottom: 20px;
+    }
+
+    .hero__text {
+        font-size: 15px;
+        margin-bottom: 28px;
+    }
+
+    .hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero__actions .btn {
+        width: 100%;
+    }
+
+    .hero__stats {
+        margin-top: 50px;
+        gap: 24px;
+        padding-top: 30px;
+    }
+
+    .hero__scroll {
+        display: none;
+    }
+
+    /* Sections */
+    .section-head {
+        margin-bottom: 40px;
+    }
+
+    .about__image img {
+        height: 360px;
+    }
+
+    .about__image-badge {
+        left: 20px;
+        bottom: 20px;
+        padding: 18px 22px;
+    }
+
+    .about__badge-num {
+        font-size: 32px;
+    }
+
+    /* Projects */
+    .projects__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project__body {
+        padding: 24px;
+    }
+
+    .project__name {
+        font-size: 26px;
+    }
+
+    /* Advantages */
+    .advantages__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .advantage {
+        padding: 36px 28px;
+    }
+
+    /* Partners */
+    .partners__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .partner {
+        font-size: 17px;
+        min-height: 90px;
+        padding: 20px 12px;
+    }
+
+    /* Form */
+    .form {
+        padding: 32px 24px;
+    }
+
+    /* Contacts */
+    .contacts__value {
+        font-size: 20px;
+    }
+
+    .contacts__map {
+        height: 320px;
+    }
+
+    /* Modal */
+    .modal__dialog {
+        padding: 40px 28px 32px;
+    }
+
+    .modal__title {
+        font-size: 26px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 60px 0 20px;
+    }
+
+    .footer__top {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        padding-bottom: 40px;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+    /* Sections padding */
+    .about,
+    .projects,
+    .advantages,
+    .partners,
+    .faq,
+    .contacts,
+    .cta {
+        padding: 60px 0;
+    }
+}
+
+/* ===== ≤ 480px — маленькие мобильные ===== */
+@media (max-width: 480px) {
+    :root {
+        --gutter: 16px;
+    }
+
+    .btn {
+        padding: 13px 22px;
+        font-size: 12px;
+    }
+
+    .btn--lg {
+        padding: 16px 28px;
+        font-size: 13px;
+    }
+
+    .hero__sub {
+        font-size: 11px;
+    }
+
+    .stat__num {
+        font-size: 30px;
+    }
+
+    .section-head__sub {
+        font-size: 11px;
+    }
+
+    .partners__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filter {
+        padding: 10px 18px;
+        font-size: 11px;
+    }
+
+    .faq__item summary {
+        font-size: 15px;
+        padding: 20px 50px 20px 20px;
+    }
+
+    .faq__item summary::after {
+        right: 20px;
+    }
+
+    .faq__answer {
+        padding: 0 20px 22px;
+    }
+}
+
+/* ===== Поддержка тёмных предпочтений (опционально) ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

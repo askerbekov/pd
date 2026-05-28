@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="description" content="BSK Capital Group — лидер в строительстве и продаже клубных домов premium класса в Кыргызстане. Жилые комплексы класса Deluxe и High в Бишкеке." />
+    <meta name="keywords" content="новостройки Бишкек, элитное жилье, клубный дом, premium недвижимость, ЖК Бишкек, BSK" />
+    <meta name="author" content="BSK Capital Group" />
+    <meta property="og:title" content="BSK Capital Group — Premium недвижимость в Кыргызстане" />
+    <meta property="og:description" content="Лидер в строительстве клубных домов premium класса" />
+    <meta property="og:type" content="website" />
+
+    <title>BSK Capital Group — Premium недвижимость в Кыргызстане</title>
+
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+    <!-- ============== ПРЕЛОАДЕР ============== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__logo">
+            <span>BSK</span>
+            <div class="preloader__bar"><div class="preloader__progress"></div></div>
+        </div>
+    </div>
+
+    <!-- ============== ШАПКА ============== -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="#hero" class="header__logo" aria-label="BSK Capital Group">
+                <svg width="56" height="40" viewBox="0 0 56 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 4 L28 4 L48 24 L28 36 L8 36 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <text x="28" y="25" text-anchor="middle" font-family="Cormorant Garamond" font-size="14" font-weight="600" fill="currentColor">BSK</text>
+                </svg>
+                <div class="header__logo-text">
+                    <span class="header__logo-title">Capital Group</span>
+                    <span class="header__logo-sub">PREMIUM REAL ESTATE</span>
+                </div>
+            </a>
+
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#about" class="nav__link">О компании</a></li>
+                    <li class="nav__item nav__item--dropdown">
+                        <a href="#projects" class="nav__link">
+                            Проекты
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5"/></svg>
+                        </a>
+                        <ul class="nav__submenu">
+                            <li><a href="#project-renome" class="nav__sublink">РЭНОМЕ</a></li>
+                            <li><a href="#project-royal-yard" class="nav__sublink">ROYAL YARD</a></li>
+                            <li><a href="#project-palladium" class="nav__sublink">PALLADIUM PARK</a></li>
+                            <li><a href="#project-royal-palace" class="nav__sublink">ROYAL PALACE</a></li>
+                            <li><a href="#project-royal-park" class="nav__sublink">ROYAL PARK</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="#faq" class="nav__link">FAQ</a></li>
+                    <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <a href="tel:+996507111111" class="header__phone">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                    </svg>
+                    <span>+996 507 111 111</span>
+                </a>
+                <button class="btn btn--primary" data-modal-open="callback">Заказать звонок</button>
+            </div>
+
+            <button class="burger" id="burger" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============== HERO ============== -->
+    <section class="hero" id="hero">
+        <div class="hero__bg" aria-hidden="true">
+            <div class="hero__slide hero__slide--active" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&q=80')"></div>
+            <div class="hero__slide" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80')"></div>
+            <div class="hero__slide" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80')"></div>
+        </div>
+        <div class="hero__overlay"></div>
+
+        <div class="container hero__container">
+            <div class="hero__content">
+                <span class="hero__sub" data-animate="fade-up">— Премиальная недвижимость в Кыргызстане</span>
+                <h1 class="hero__title" data-animate="fade-up" data-delay="100">
+                    Лидер в строительстве<br />
+                    и продаже <span class="text-accent">клубных домов</span><br />
+                    premium класса
+                </h1>
+                <p class="hero__text" data-animate="fade-up" data-delay="200">
+                    Создаём пространства, в которых сочетаются роскошь, безопасность и комфорт каждого дня.
+                </p>
+                <div class="hero__actions" data-animate="fade-up" data-delay="300">
+                    <a href="#projects" class="btn btn--primary btn--lg">Наши проекты</a>
+                    <button class="btn btn--outline btn--lg" data-modal-open="callback">Связаться с нами</button>
+                </div>
+            </div>
+
+            <div class="hero__stats" data-animate="fade-up" data-delay="400">
+                <div class="stat">
+                    <span class="stat__num" data-count="6">0</span>
+                    <span class="stat__label">лет на рынке</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__num" data-count="5">0</span>
+                    <span class="stat__label">проектов</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__num" data-count="800">0</span><span class="stat__plus">+</span>
+                    <span class="stat__label">довольных семей</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__num" data-count="100">0</span><span class="stat__plus">%</span>
+                    <span class="stat__label">сданных в срок</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__pager" id="heroPager">
+            <button class="hero__dot hero__dot--active" data-slide="0"></button>
+            <button class="hero__dot" data-slide="1"></button>
+            <button class="hero__dot" data-slide="2"></button>
+        </div>
+
+        <a href="#about" class="hero__scroll" aria-label="Прокрутить вниз">
+            <span></span>
+        </a>
+    </section>
+
+    <!-- ============== О КОМПАНИИ ============== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-head" data-animate="fade-up">
+                <span class="section-head__sub">— О компании</span>
+                <h2 class="section-head__title">Создаём дома,<br />достойные вашей жизни</h2>
+            </div>
+
+            <div class="about__grid">
+                <div class="about__image" data-animate="fade-right">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80" alt="Архитектура BSK Capital Group" />
+                    <div class="about__image-badge">
+                        <span class="about__badge-num">2018</span>
+                        <span class="about__badge-text">год основания</span>
+                    </div>
+                </div>
+
+                <div class="about__content" data-animate="fade-left">
+                    <p class="about__lead">
+                        <strong>BSK Capital Group</strong> — строительная компания полного цикла, основанная в 2018 году.
+                    </p>
+                    <p>
+                        Мы специализируемся на возведении клубных домов класса Deluxe и High в самых престижных районах Бишкека. Наша миссия — формировать новую культуру жилья в Кыргызстане, где архитектура, технологии и сервис достигают уровня мировых столиц.
+                    </p>
+                    <p>
+                        Каждый проект BSK — это закрытая территория, продуманные планировки, премиальные инженерные системы и команда профессионалов, отвечающая за дом от первого камня до момента, когда вы открываете дверь своей квартиры.
+                    </p>
+
+                    <ul class="about__features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                            <span>Собственное производство и строительный контроль</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                            <span>Архитектура от ведущих бюро региона</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                            <span>Сейсмостойкие монолитно-каркасные конструкции</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                            <span>Гарантия 5 лет на все инженерные системы</span>
+                        </li>
+                    </ul>
+
+                    <a href="#projects" class="btn btn--dark">Посмотреть проекты</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== ПРОЕКТЫ ============== -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-head section-head--center" data-animate="fade-up">
+                <span class="section-head__sub">— Наши проекты</span>
+                <h2 class="section-head__title">Жилые комплексы<br />в сердце Бишкека</h2>
+                <p class="section-head__text">Пять премиальных клубных домов в престижных локациях столицы. Каждый — авторский, с уникальной концепцией.</p>
+            </div>
+
+            <div class="projects__filters" data-animate="fade-up">
+                <button class="filter filter--active" data-filter="all">Все проекты</button>
+                <button class="filter" data-filter="building">Строятся</button>
+                <button class="filter" data-filter="done">Сданы</button>
+            </div>
+
+            <div class="projects__grid" id="projectsGrid">
+
+                <article class="project" id="project-renome" data-status="building">
+                    <div class="project__image">
+                        <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=900&q=80" alt="ЖК Рэноме" />
+                        <span class="project__status project__status--building">Строится</span>
+                    </div>
+                    <div class="project__body">
+                        <span class="project__class">Premium-класс</span>
+                        <h3 class="project__name">РЭНОМЕ</h3>
+                        <p class="project__location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Бишкек, ул. Раззакова
+                        </p>
+                        <div class="project__info">
+                            <div><span>Этажность</span><strong>12</strong></div>
+                            <div><span>Квартир</span><strong>84</strong></div>
+                            <div><span>Сдача</span><strong>2026</strong></div>
+                        </div>
+                        <a href="#contacts" class="project__link">Подробнее
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project" id="project-royal-yard" data-status="building">
+                    <div class="project__image">
+                        <img src="https://images.unsplash.com/photo-1567496898669-ee935f5f647a?auto=format&fit=crop&w=900&q=80" alt="ROYAL YARD" />
+                        <span class="project__status project__status--building">Строится</span>
+                    </div>
+                    <div class="project__body">
+                        <span class="project__class">Deluxe-класс</span>
+                        <h3 class="project__name">ROYAL YARD</h3>
+                        <p class="project__location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Бишкек, ул. Боконбаева
+                        </p>
+                        <div class="project__info">
+                            <div><span>Этажность</span><strong>9</strong></div>
+                            <div><span>Квартир</span><strong>56</strong></div>
+                            <div><span>Сдача</span><strong>2025</strong></div>
+                        </div>
+                        <a href="#contacts" class="project__link">Подробнее
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project" id="project-palladium" data-status="done">
+                    <div class="project__image">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80" alt="PALLADIUM PARK" />
+                        <span class="project__status project__status--done">Сдан</span>
+                    </div>
+                    <div class="project__body">
+                        <span class="project__class">High-класс</span>
+                        <h3 class="project__name">PALLADIUM PARK</h3>
+                        <p class="project__location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Бишкек, ул. Тыныстанова
+                        </p>
+                        <div class="project__info">
+                            <div><span>Этажность</span><strong>14</strong></div>
+                            <div><span>Квартир</span><strong>120</strong></div>
+                            <div><span>Сдан</span><strong>2023</strong></div>
+                        </div>
+                        <a href="#contacts" class="project__link">Подробнее
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project" id="project-royal-palace" data-status="done">
+                    <div class="project__image">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=80" alt="ROYAL PALACE" />
+                        <span class="project__status project__status--done">Сдан</span>
+                    </div>
+                    <div class="project__body">
+                        <span class="project__class">Deluxe-класс</span>
+                        <h3 class="project__name">ROYAL PALACE</h3>
+                        <p class="project__location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Бишкек, ул. Логвиненко
+                        </p>
+                        <div class="project__info">
+                            <div><span>Этажность</span><strong>10</strong></div>
+                            <div><span>Квартир</span><strong>48</strong></div>
+                            <div><span>Сдан</span><strong>2022</strong></div>
+                        </div>
+                        <a href="#contacts" class="project__link">Подробнее
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project" id="project-royal-park" data-status="done">
+                    <div class="project__image">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80" alt="ROYAL PARK" />
+                        <span class="project__status project__status--done">Сдан</span>
+                    </div>
+                    <div class="project__body">
+                        <span class="project__class">Premium-класс</span>
+                        <h3 class="project__name">ROYAL PARK</h3>
+                        <p class="project__location">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Бишкек, ул. Исанова
+                        </p>
+                        <div class="project__info">
+                            <div><span>Этажность</span><strong>12</strong></div>
+                            <div><span>Квартир</span><strong>96</strong></div>
+                            <div><span>Сдан</span><strong>2021</strong></div>
+                        </div>
+                        <a href="#contacts" class="project__link">Подробнее
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== ПРЕИМУЩЕСТВА ============== -->
+    <section class="advantages">
+        <div class="container">
+            <div class="section-head section-head--light" data-animate="fade-up">
+                <span class="section-head__sub">— Почему BSK</span>
+                <h2 class="section-head__title">Премиум — это детали</h2>
+            </div>
+
+            <div class="advantages__grid">
+                <div class="advantage" data-animate="fade-up">
+                    <div class="advantage__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h1M9 12h1M9 15h1M14 9h1M14 12h1M14 15h1"/>
+                        </svg>
+                    </div>
+                    <h3>Авторская архитектура</h3>
+                    <p>Каждый дом проектируется индивидуально — никаких типовых решений. Работаем с архитекторами международного уровня.</p>
+                </div>
+
+                <div class="advantage" data-animate="fade-up" data-delay="100">
+                    <div class="advantage__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Премиум-материалы</h3>
+                    <p>Сотрудничество с мировыми брендами: Daikin, Ariston, LG, Reynaers, Hörmann — только сертифицированные поставщики.</p>
+                </div>
+
+                <div class="advantage" data-animate="fade-up" data-delay="200">
+                    <div class="advantage__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Сейсмостойкость 9 баллов</h3>
+                    <p>Монолитно-каркасная технология, расчёт прочности по строжайшим нормам, толщина стен — 350 мм.</p>
+                </div>
+
+                <div class="advantage" data-animate="fade-up" data-delay="300">
+                    <div class="advantage__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3>Сдача в срок</h3>
+                    <p>100% наших объектов сданы в заявленные сроки. Прозрачные этапы — ежемесячный отчёт о ходе работ.</p>
+                </div>
+
+                <div class="advantage" data-animate="fade-up">
+                    <div class="advantage__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Закрытая территория</h3>
+                    <p>Охрана 24/7, видеонаблюдение, контроль доступа, подземный паркинг, благоустроенный двор без машин.</p>
+                </div>
+
+                <div class="advantage" data-animate="fade-up" data-delay="100">
+                    <div class="advantage__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <h3>Сервис управления</h3>
+                    <p>Собственная управляющая компания. Концьерж, клининг, обслуживание инженерных систем — всё под одной крышей.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== ПАРТНЁРЫ ============== -->
+    <section class="partners">
+        <div class="container">
+            <div class="section-head section-head--center" data-animate="fade-up">
+                <span class="section-head__sub">— Партнёры</span>
+                <h2 class="section-head__title">Работаем с лидерами<br />мирового рынка</h2>
+            </div>
+
+            <div class="partners__grid" data-animate="fade-up">
+                <div class="partner">Daikin</div>
+                <div class="partner">Ariston</div>
+                <div class="partner">LG</div>
+                <div class="partner">Reynaers</div>
+                <div class="partner">Hörmann</div>
+                <div class="partner">Fuji</div>
+                <div class="partner">Sinikon</div>
+                <div class="partner">Stout</div>
+                <div class="partner">Lemonta</div>
+                <div class="partner">TSTN</div>
+                <div class="partner">Schneider</div>
+                <div class="partner">Knauf</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== FAQ ============== -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="faq__grid">
+                <div class="section-head" data-animate="fade-up">
+                    <span class="section-head__sub">— Вопросы и ответы</span>
+                    <h2 class="section-head__title">Что важно знать<br />до покупки</h2>
+                    <p class="section-head__text">Собрали самые частые вопросы, которые задают наши клиенты на этапе выбора квартиры.</p>
+                    <button class="btn btn--dark" data-modal-open="callback">Задать свой вопрос</button>
+                </div>
+
+                <div class="faq__list" data-animate="fade-up">
+                    <details class="faq__item" open>
+                        <summary>Какие способы оплаты доступны?</summary>
+                        <div class="faq__answer">
+                            <p>Доступна полная оплата, рассрочка от застройщика до 3 лет без переплат, ипотека от партнёрских банков. Возможен зачёт вашей текущей недвижимости в стоимость новой квартиры (trade-in).</p>
+                        </div>
+                    </details>
+
+                    <details class="faq__item">
+                        <summary>В каком виде сдаются квартиры?</summary>
+                        <div class="faq__answer">
+                            <p>Все квартиры передаются в премиум-черновой отделке: оштукатуренные стены, стяжка пола, разводка коммуникаций, металлопластиковые окна Reynaers. По запросу — отделка «под ключ» от дизайн-студии BSK.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq__item">
+                        <summary>Что входит в инфраструктуру дома?</summary>
+                        <div class="faq__answer">
+                            <p>Подземный паркинг, лобби с консьерж-сервисом, фитнес-зона, детская комната, кладовые, благоустроенная закрытая территория с ландшафтным дизайном и зонами отдыха.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq__item">
+                        <summary>Какая гарантия на квартиру и дом?</summary>
+                        <div class="faq__answer">
+                            <p>Стандартная гарантия на конструктив — 10 лет, на инженерные системы (отопление, водоснабжение, вентиляция) — 5 лет, на отделочные работы (если выбран пакет «под ключ») — 2 года.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq__item">
+                        <summary>Можно ли посмотреть квартиру до покупки?</summary>
+                        <div class="faq__answer">
+                            <p>Конечно. Запишитесь на индивидуальный показ через форму обратной связи или по телефону. Менеджер встретит вас в шоу-руме, покажет планировки в формате VR и проведёт по объекту.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq__item">
+                        <summary>Кто управляет домом после сдачи?</summary>
+                        <div class="faq__answer">
+                            <p>Управление осуществляет собственная УК BSK Service. Это гарантия единых стандартов сервиса: уборка территории, охрана 24/7, техническое обслуживание, концьерж, единая диспетчерская.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== CTA ============== -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta__inner" data-animate="fade-up">
+                <h2 class="cta__title">Подберём квартиру вашей мечты</h2>
+                <p class="cta__text">Оставьте заявку — персональный менеджер свяжется с вами в течение 15 минут</p>
+                <button class="btn btn--primary btn--lg" data-modal-open="callback">Оставить заявку</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== КОНТАКТЫ ============== -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <div class="section-head" data-animate="fade-up">
+                <span class="section-head__sub">— Контакты</span>
+                <h2 class="section-head__title">Будем рады встрече<br />в нашем офисе</h2>
+            </div>
+
+            <div class="contacts__grid">
+                <div class="contacts__info" data-animate="fade-right">
+
+                    <div class="contacts__block">
+                        <span class="contacts__label">Офис продаж</span>
+                        <p>г. Бишкек, ул. Раззакова 2<br />пн–сб: 09:00–19:00, вс: выходной</p>
+                    </div>
+
+                    <div class="contacts__block">
+                        <span class="contacts__label">Телефон</span>
+                        <a href="tel:+996507111111" class="contacts__value">+996 (507) 111-111</a>
+                        <a href="tel:+996555111111" class="contacts__value">+996 (555) 111-111</a>
+                    </div>
+
+                    <div class="contacts__block">
+                        <span class="contacts__label">E-mail</span>
+                        <a href="mailto:info@capital-group.kg" class="contacts__value">info@capital-group.kg</a>
+                    </div>
+
+                    <div class="contacts__block">
+                        <span class="contacts__label">Мы в соц. сетях</span>
+                        <div class="contacts__socials">
+                            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01"/></svg></a>
+                            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+                            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+                            <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8z"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contacts__form form" id="contactForm" data-animate="fade-left" novalidate>
+                    <h3 class="form__title">Оставить заявку</h3>
+                    <p class="form__sub">Заполните форму — мы перезвоним в течение 15 минут</p>
+
+                    <div class="form__field">
+                        <input type="text" name="name" id="name" placeholder=" " required minlength="2" />
+                        <label for="name">Ваше имя</label>
+                        <span class="form__error" data-error="name"></span>
+                    </div>
+
+                    <div class="form__field">
+                        <input type="tel" name="phone" id="phone" placeholder=" " required />
+                        <label for="phone">Телефон</label>
+                        <span class="form__error" data-error="phone"></span>
+                    </div>
+
+                    <div class="form__field">
+                        <select name="project" id="project">
+                            <option value="">Любой проект</option>
+                            <option value="renome">РЭНОМЕ</option>
+                            <option value="royal-yard">ROYAL YARD</option>
+                            <option value="palladium">PALLADIUM PARK</option>
+                            <option value="royal-palace">ROYAL PALACE</option>
+                            <option value="royal-park">ROYAL PARK</option>
+                        </select>
+                        <label for="project" class="form__label-select">Интересующий проект</label>
+                    </div>
+
+                    <div class="form__field">
+                        <textarea name="message" id="message" rows="3" placeholder=" "></textarea>
+                        <label for="message">Комментарий (необязательно)</label>
+                    </div>
+
+                    <label class="form__check">
+                        <input type="checkbox" required checked />
+                        <span></span>
+                        <small>Я согласен(на) на обработку персональных данных</small>
+                    </label>
+
+                    <button type="submit" class="btn btn--primary btn--block">Отправить заявку</button>
+                </form>
+            </div>
+
+            <div class="contacts__map" data-animate="fade-up">
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=74.59%2C42.87%2C74.61%2C42.88&amp;layer=mapnik&amp;marker=42.874%2C74.602"
+                    loading="lazy"
+                    title="Офис BSK Capital Group">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== ФУТЕР ============== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__col footer__col--brand">
+                    <a href="#hero" class="footer__logo">
+                        <svg width="56" height="40" viewBox="0 0 56 40" fill="none">
+                            <path d="M8 4 L28 4 L48 24 L28 36 L8 36 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <text x="28" y="25" text-anchor="middle" font-family="Cormorant Garamond" font-size="14" font-weight="600" fill="currentColor">BSK</text>
+                        </svg>
+                        <div>
+                            <span>Capital Group</span>
+                            <small>PREMIUM REAL ESTATE</small>
+                        </div>
+                    </a>
+                    <p class="footer__about">Строительная компания полного цикла. Создаём клубные дома premium класса в Кыргызстане с 2018 года.</p>
+                </div>
+
+                <div class="footer__col">
+                    <h4>Меню</h4>
+                    <ul>
+                        <li><a href="#about">О компании</a></li>
+                        <li><a href="#projects">Проекты</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4>Проекты</h4>
+                    <ul>
+                        <li><a href="#project-renome">РЭНОМЕ</a></li>
+                        <li><a href="#project-royal-yard">ROYAL YARD</a></li>
+                        <li><a href="#project-palladium">PALLADIUM PARK</a></li>
+                        <li><a href="#project-royal-palace">ROYAL PALACE</a></li>
+                        <li><a href="#project-royal-park">ROYAL PARK</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="tel:+996507111111">+996 (507) 111-111</a></li>
+                        <li><a href="mailto:info@capital-group.kg">info@capital-group.kg</a></li>
+                        <li>г. Бишкек, ул. Раззакова 2</li>
+                    </ul>
+                    <button class="btn btn--outline" data-modal-open="callback">Заказать звонок</button>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>© 2018–<span id="year">2026</span> BSK Capital Group. Все права защищены.</p>
+                <p class="footer__author">Дипломный проект · JavaScript Real Estate Website</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============== МОДАЛКА ============== -->
+    <div class="modal" id="modal-callback" aria-hidden="true">
+        <div class="modal__backdrop" data-modal-close></div>
+        <div class="modal__dialog" role="dialog" aria-labelledby="modalTitle">
+            <button class="modal__close" data-modal-close aria-label="Закрыть">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+            <h3 id="modalTitle" class="modal__title">Заказать звонок</h3>
+            <p class="modal__text">Оставьте номер — перезвоним в течение 15 минут</p>
+
+            <form class="form" id="modalForm" novalidate>
+                <div class="form__field">
+                    <input type="text" name="name" placeholder=" " required minlength="2" />
+                    <label>Ваше имя</label>
+                    <span class="form__error" data-error="name"></span>
+                </div>
+                <div class="form__field">
+                    <input type="tel" name="phone" placeholder=" " required />
+                    <label>Телефон</label>
+                    <span class="form__error" data-error="phone"></span>
+                </div>
+                <label class="form__check">
+                    <input type="checkbox" required checked />
+                    <span></span>
+                    <small>Согласен(на) на обработку персональных данных</small>
+                </label>
+                <button type="submit" class="btn btn--primary btn--block">Перезвоните мне</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ============== TOAST ============== -->
+    <div class="toast" id="toast"></div>
+
+    <!-- ============== СКРИПТЫ ============== -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
