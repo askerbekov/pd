@@ -1,0 +1,217 @@
+[
+  {
+    "id": "renome",
+    "slug": "renome",
+    "name": "РЭНОМЕ",
+    "class": "Premium-класс",
+    "status": "building",
+    "statusLabel": "Строится",
+    "image": "img/projects/renome/cover.jpg",
+    "gallery": [
+      "img/projects/renome/cover.jpg",
+      "img/projects/renome/01-facade.jpg",
+      "img/projects/renome/02-roof.jpg",
+      "img/projects/renome/03-detail.jpg",
+      "img/projects/renome/04-entry.jpg",
+      "img/projects/renome/05-yard.jpg",
+      "img/projects/renome/06-aerial.jpg",
+      "img/projects/renome/07-aerial-2.jpg",
+      "img/projects/renome/08-master.jpg"
+    ],
+    "location": "Бишкек, ул. Раззакова",
+    "address": "г. Бишкек, ул. Раззакова 21",
+    "floors": 7,
+    "apartments": 120,
+    "deadline": "2026",
+    "deadlineLabel": "Сдача",
+    "areaFrom": 62,
+    "areaTo": 210,
+    "priceFrom": 1450,
+    "ceiling": "3.2 м",
+    "tagline": "Клубный квартал в неоклассическом стиле — несколько корпусов, закрытая территория, детская и спорт-зоны",
+    "description": "РЭНОМЕ — премиум-проект из нескольких корпусов в неоклассическом стиле. Авторский фасад с французскими балконами, коваными решётками балюстрад и мансардными крышами с башенками. Закрытая территория со своим ландшафтом: фонтан и беседка-ротонда у парадного входа, прогулочные аллеи, детская и баскетбольная площадки, закрытый паркинг с навесами. Камерный масштаб клубного квартала и приватность каждого резидента — без проходных через двор.",
+    "highlights": [
+      "Авторский фасад из натурального камня с французскими балконами",
+      "Мансардные крыши с башенками — узнаваемый силуэт квартала",
+      "Панорамные арочные окна с тёплыми профилями",
+      "Кованые балюстрады ручной работы",
+      "Лобби с консьерж-сервисом и парадными лестницами",
+      "Закрытая территория с фонтаном и беседкой-ротондой",
+      "Детская и баскетбольная площадки на территории",
+      "Закрытый паркинг с навесами",
+      "Кладовые помещения для каждой квартиры",
+      "Гарантия 5 лет на инженерные системы"
+    ],
+    "infrastructure": [
+      "Школы и детские сады в шаговой доступности",
+      "Парк Панфилова — 5 минут пешком",
+      "Центральные торговые галереи в радиусе 700 м",
+      "Премиальные рестораны и кофейни рядом",
+      "Удобный выезд на основные магистрали города"
+    ]
+  },
+  {
+    "id": "royal-yard",
+    "slug": "royal-yard",
+    "name": "ROYAL YARD",
+    "class": "Deluxe-класс",
+    "status": "building",
+    "statusLabel": "Строится",
+    "image": "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?auto=format&fit=crop&w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "location": "Бишкек, ул. Боконбаева",
+    "address": "г. Бишкек, ул. Боконбаева 158",
+    "floors": 9,
+    "apartments": 56,
+    "deadline": "2025",
+    "deadlineLabel": "Сдача",
+    "areaFrom": 74,
+    "areaTo": 220,
+    "priceFrom": 1620,
+    "ceiling": "3.3 м",
+    "tagline": "Закрытый двор и атмосфера европейского квартала",
+    "description": "ROYAL YARD — клубный дом класса Deluxe с акцентом на закрытый внутренний двор и приватность каждого резидента. Современная архитектура с тёплой палитрой материалов, продуманные планировки от 74 до 220 м² и панорамные окна, открывающие виды на горы.",
+    "highlights": [
+      "Закрытый внутренний двор с фонтаном и зонами отдыха",
+      "Двусветное лобби с дизайнерским интерьером",
+      "Просторные планировки с гардеробными и мастер-спальнями",
+      "Подземный паркинг и кладовые на каждом этаже",
+      "Современные лифты Schindler с биометрическим доступом",
+      "Энергоэффективные инженерные системы"
+    ],
+    "infrastructure": [
+      "Дубовый парк в 10 минутах пешком",
+      "Бизнес-центры и банки на соседних улицах",
+      "Школа №13 и гимназия №24 в шаговой доступности",
+      "Премиальные клиники и фитнес-центры рядом"
+    ]
+  },
+  {
+    "id": "palladium",
+    "slug": "palladium",
+    "name": "PALLADIUM PARK",
+    "class": "High-класс",
+    "status": "done",
+    "statusLabel": "Сдан",
+    "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "location": "Бишкек, ул. Тыныстанова",
+    "address": "г. Бишкек, ул. Тыныстанова 254",
+    "floors": 14,
+    "apartments": 120,
+    "deadline": "2023",
+    "deadlineLabel": "Сдан",
+    "areaFrom": 55,
+    "areaTo": 168,
+    "priceFrom": 1280,
+    "ceiling": "3.1 м",
+    "tagline": "Жизнь рядом с центральным парком",
+    "description": "PALLADIUM PARK — современный жилой комплекс High-класса, расположенный в престижной локации рядом с центральным парком Бишкека. Сданный объект с устоявшейся инфраструктурой, работающим консьерж-сервисом и развитой управляющей компанией BSK Service.",
+    "highlights": [
+      "Готовое жильё с возможностью немедленного заселения",
+      "Лобби с круглосуточным консьерж-сервисом",
+      "Подземный паркинг на 2 уровня",
+      "Фитнес-зал и детская комната в составе дома",
+      "Видеонаблюдение по всему периметру",
+      "Действующая управляющая компания BSK Service"
+    ],
+    "infrastructure": [
+      "Центральный парк через дорогу",
+      "Школы, детские сады и колледжи в пешей доступности",
+      "Городской пляж и набережная в 5 минутах",
+      "Развитая транспортная развязка"
+    ]
+  },
+  {
+    "id": "royal-palace",
+    "slug": "royal-palace",
+    "name": "ROYAL PALACE",
+    "class": "Deluxe-класс",
+    "status": "done",
+    "statusLabel": "Сдан",
+    "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "location": "Бишкек, ул. Логвиненко",
+    "address": "г. Бишкек, ул. Логвиненко 102",
+    "floors": 10,
+    "apartments": 48,
+    "deadline": "2022",
+    "deadlineLabel": "Сдан",
+    "areaFrom": 82,
+    "areaTo": 240,
+    "priceFrom": 1550,
+    "ceiling": "3.4 м",
+    "tagline": "Камерный дом для избранных",
+    "description": "ROYAL PALACE — камерный клубный дом всего на 48 квартир, расположенный в одном из самых тихих и зелёных районов Бишкека. Дом с устоявшейся репутацией: высокий уровень сервиса, ухоженная закрытая территория и комьюнити резидентов, которое формировалось годами.",
+    "highlights": [
+      "Камерность: всего 48 квартир на 10 этажах",
+      "Эксклюзивная отделка лобби и общих зон",
+      "Закрытая территория с круглосуточной охраной",
+      "Подземный паркинг с прямым лифтом в квартиру",
+      "Авторские планировки с большими террасами",
+      "Премиальное инженерное оборудование Daikin/Ariston"
+    ],
+    "infrastructure": [
+      "Зелёная зона и сквер у дома",
+      "Лучшие школы города в пешей доступности",
+      "Концептуальные рестораны и галереи рядом",
+      "Премиальные ТЦ в радиусе 1 км"
+    ]
+  },
+  {
+    "id": "royal-park",
+    "slug": "royal-park",
+    "name": "ROYAL PARK",
+    "class": "Premium-класс",
+    "status": "done",
+    "statusLabel": "Сдан",
+    "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "location": "Бишкек, ул. Исанова",
+    "address": "г. Бишкек, ул. Исанова 75",
+    "floors": 12,
+    "apartments": 96,
+    "deadline": "2021",
+    "deadlineLabel": "Сдан",
+    "areaFrom": 60,
+    "areaTo": 175,
+    "priceFrom": 1390,
+    "ceiling": "3.2 м",
+    "tagline": "Первый знаковый проект BSK Capital Group",
+    "description": "ROYAL PARK — первый знаковый проект BSK Capital Group, заложивший стандарты премиального жилья в Бишкеке. Сданный в 2021 году дом продолжает удерживать репутацию одного из самых востребованных адресов в городе.",
+    "highlights": [
+      "Знаковая локация в центре города",
+      "Узнаваемый авторский фасад",
+      "Развитая инфраструктура внутри дома",
+      "Большой подземный паркинг",
+      "Закрытая благоустроенная территория",
+      "Сложившееся премиальное комьюнити"
+    ],
+    "infrastructure": [
+      "Бизнес-центры и офисы крупных компаний рядом",
+      "Развитая транспортная сеть",
+      "Лучшие школы и гимназии в шаговой доступности",
+      "Премиальные сервисы и рестораны"
+    ]
+  }
+]

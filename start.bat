@@ -85,6 +85,7 @@ echo   Чтобы остановить - закройте это окно
 echo  ============================================================
 echo.
 start "" "http://localhost:8000"
+start "" "http://localhost:8000/admin.html"
 call npx --yes serve . -l 8000
 goto :end
 
@@ -97,6 +98,7 @@ echo   Чтобы остановить - закройте это окно
 echo  ============================================================
 echo.
 start "" "http://localhost:8000"
+start "" "http://localhost:8000/admin.html"
 python -m http.server 8000
 goto :end
 
@@ -108,6 +110,7 @@ echo   Чтобы остановить - закройте это окно
 echo  ============================================================
 echo.
 start "" "http://localhost:8000"
+start "" "http://localhost:8000/admin.html"
 py -m http.server 8000
 goto :end
 

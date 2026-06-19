@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="description" content="Детальная информация о клубных домах BSK Capital Group" />
+    <meta name="author" content="BSK Capital Group" />
+
+    <title id="pageTitle"> BSK Capital Group</title>
+
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/project.css" />
+</head>
+<body>
+
+    <!-- ============== ШАПКА ============== -->
+    <header class="header header--solid" id="header">
+        <div class="container header__container">
+            <a href="index.html#hero" class="header__logo" aria-label="BSK Capital Group">
+                <svg width="56" height="40" viewBox="0 0 56 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 4 L28 4 L48 24 L28 36 L8 36 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <text x="28" y="25" text-anchor="middle" font-family="Cormorant Garamond" font-size="14" font-weight="600" fill="currentColor">BSK</text>
+                </svg>
+                <div class="header__logo-text">
+                    <span class="header__logo-title">Capital Group</span>
+                    <span class="header__logo-sub">PREMIUM REAL ESTATE</span>
+                </div>
+            </a>
+
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">О компании</a></li>
+                    <li class="nav__item nav__item--dropdown">
+                        <a href="index.html#projects" class="nav__link">
+                            Проекты
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5"/></svg>
+                        </a>
+                        <ul class="nav__submenu" id="navProjects"></ul>
+                    </li>
+                    <li class="nav__item"><a href="index.html#faq" class="nav__link">FAQ</a></li>
+                    <li class="nav__item"><a href="index.html#contacts" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <a href="tel:+996507111111" class="header__phone">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                    </svg>
+                    <span>+996 507 111 111</span>
+                </a>
+                <button class="btn btn--primary" data-modal-open="callback">Заказать звонок</button>
+            </div>
+
+            <button class="burger" id="burger" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============== HERO ПРОЕКТА ============== -->
+    <section class="project-hero" id="projectHero">
+        <div class="project-hero__bg" id="projectHeroBg"></div>
+        <div class="project-hero__overlay"></div>
+        <div class="container project-hero__container">
+            <nav class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <span>/</span>
+                <a href="index.html#projects">Проекты</a>
+                <span>/</span>
+                <span id="crumbName">…</span>
+            </nav>
+
+            <span class="project-hero__status" id="projectStatus">…</span>
+            <h1 class="project-hero__title" id="projectName">Загрузка…</h1>
+            <p class="project-hero__tagline" id="projectTagline"></p>
+
+            <div class="project-hero__meta" id="projectMeta"></div>
+
+            <div class="project-hero__actions">
+                <button class="btn btn--primary btn--lg" data-modal-open="callback">Записаться на показ</button>
+                <a href="#info" class="btn btn--outline btn--lg">Подробнее о проекте</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== ИНФО О ПРОЕКТЕ ============== -->
+    <section class="project-info" id="info">
+        <div class="container">
+            <div class="project-info__grid">
+                <div class="project-info__main">
+                    <span class="section-head__sub">— О проекте</span>
+                    <h2 class="section-head__title" id="aboutTitle">О проекте</h2>
+                    <p class="project-info__lead" id="projectDescription"></p>
+
+                    <h3 class="project-info__subtitle">Особенности проекта</h3>
+                    <ul class="project-info__features" id="projectHighlights"></ul>
+
+                    <h3 class="project-info__subtitle">Инфраструктура и локация</h3>
+                    <ul class="project-info__features" id="projectInfrastructure"></ul>
+                </div>
+
+                <aside class="project-info__aside">
+                    <div class="spec-card">
+                        <h4>Характеристики</h4>
+                        <dl id="projectSpecs"></dl>
+                        <button class="btn btn--dark btn--block" data-modal-open="callback">Получить презентацию</button>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== ГАЛЕРЕЯ ============== -->
+    <section class="project-gallery">
+        <div class="container">
+            <div class="section-head section-head--center">
+                <span class="section-head__sub">— Галерея</span>
+                <h2 class="section-head__title">Как выглядит проект</h2>
+                <p class="section-head__text">Нажмите на фото, чтобы открыть в большом размере</p>
+            </div>
+            <div class="project-gallery__grid" id="projectGallery"></div>
+        </div>
+    </section>
+
+    <!-- ============== INLINE-ЗАЯВКА ============== -->
+    <section class="project-lead" id="projectLead">
+        <div class="container">
+            <div class="project-lead__grid">
+                <div>
+                    <span class="section-head__sub">— Запись на показ</span>
+                    <h2 class="section-head__title">Посмотреть<br /><span class="text-accent" id="leadProjectName">проект</span> вживую</h2>
+                    <p class="project-lead__text">Менеджер свяжется с вами в течение 15 минут, согласует удобное время и проведёт по объекту. Покажет планировки, виды из окон и шоу-рум.</p>
+                    <ul class="project-lead__perks">
+                        <li>Индивидуальный показ от менеджера</li>
+                        <li>Презентация и прайс на руки</li>
+                        <li>VR-тур по выбранной планировке</li>
+                    </ul>
+                </div>
+                <form class="form project-lead__form" id="projectLeadForm" data-source="Заявка на показ" novalidate>
+                    <h3 class="form__title">Записаться на показ</h3>
+                    <div class="form__field">
+                        <input type="text" name="name" placeholder=" " required minlength="2" />
+                        <label>Ваше имя</label>
+                        <span class="form__error" data-error="name"></span>
+                    </div>
+                    <div class="form__field">
+                        <input type="tel" name="phone" placeholder=" " required />
+                        <label>Телефон</label>
+                        <span class="form__error" data-error="phone"></span>
+                    </div>
+                    <div class="form__field">
+                        <textarea name="message" rows="2" placeholder=" "></textarea>
+                        <label>Удобное время для звонка</label>
+                    </div>
+                    <input type="hidden" name="project" id="leadProjectInput" />
+                    <label class="form__check">
+                        <input type="checkbox" required checked />
+                        <span></span>
+                        <small>Согласен(на) на обработку персональных данных</small>
+                    </label>
+                    <button type="submit" class="btn btn--primary btn--block">Записаться на показ</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== LIGHTBOX ============== -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox__close" data-lightbox-close aria-label="Закрыть">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+        <button class="lightbox__nav lightbox__nav--prev" data-lightbox-prev aria-label="Предыдущее">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <img class="lightbox__img" id="lightboxImg" alt="" />
+        <button class="lightbox__nav lightbox__nav--next" data-lightbox-next aria-label="Следующее">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+        <div class="lightbox__counter" id="lightboxCounter"></div>
+    </div>
+
+    <!-- ============== CTA ============== -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta__inner">
+                <h2 class="cta__title">Заинтересовались? Свяжемся с вами</h2>
+                <p class="cta__text">Оставьте заявку — менеджер расскажет о свободных планировках и условиях покупки</p>
+                <button class="btn btn--primary btn--lg" data-modal-open="callback">Оставить заявку</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== ФУТЕР ============== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__col footer__col--brand">
+                    <a href="index.html#hero" class="footer__logo">
+                        <svg width="56" height="40" viewBox="0 0 56 40" fill="none">
+                            <path d="M8 4 L28 4 L48 24 L28 36 L8 36 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <text x="28" y="25" text-anchor="middle" font-family="Cormorant Garamond" font-size="14" font-weight="600" fill="currentColor">BSK</text>
+                        </svg>
+                        <div>
+                            <span>Capital Group</span>
+                            <small>PREMIUM REAL ESTATE</small>
+                        </div>
+                    </a>
+                    <p class="footer__about">Строительная компания полного цикла. Создаём клубные дома premium класса в Кыргызстане с 2018 года.</p>
+                </div>
+
+                <div class="footer__col">
+                    <h4>Меню</h4>
+                    <ul>
+                        <li><a href="index.html#about">О компании</a></li>
+                        <li><a href="index.html#projects">Проекты</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                        <li><a href="index.html#contacts">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4>Проекты</h4>
+                    <ul id="footerProjects"></ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="tel:+996507111111">+996 (507) 111-111</a></li>
+                        <li><a href="mailto:info@capital-group.kg">info@capital-group.kg</a></li>
+                        <li>г. Бишкек, ул. Раззакова 2</li>
+                    </ul>
+                    <button class="btn btn--outline" data-modal-open="callback">Заказать звонок</button>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>© 2018–<span id="year">2026</span> BSK Capital Group. Все права защищены.</p>
+                <p class="footer__author">Дипломный проект · JavaScript Real Estate Website</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============== МОДАЛКА ============== -->
+    <div class="modal" id="modal-callback" aria-hidden="true">
+        <div class="modal__backdrop" data-modal-close></div>
+        <div class="modal__dialog" role="dialog" aria-labelledby="modalTitle">
+            <button class="modal__close" data-modal-close aria-label="Закрыть">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+            <h3 id="modalTitle" class="modal__title">Заказать звонок</h3>
+            <p class="modal__text">Оставьте номер — перезвоним в течение 15 минут</p>
+
+            <form class="form" id="modalForm" data-source="Модалка callback" novalidate>
+                <div class="form__field">
+                    <input type="text" name="name" placeholder=" " required minlength="2" />
+                    <label>Ваше имя</label>
+                    <span class="form__error" data-error="name"></span>
+                </div>
+                <div class="form__field">
+                    <input type="tel" name="phone" placeholder=" " required />
+                    <label>Телефон</label>
+                    <span class="form__error" data-error="phone"></span>
+                </div>
+                <label class="form__check">
+                    <input type="checkbox" required checked />
+                    <span></span>
+                    <small>Согласен(на) на обработку персональных данных</small>
+                </label>
+                <button type="submit" class="btn btn--primary btn--block">Перезвоните мне</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script type="module" src="js/projectPage.js"></script>
+</body>
+</html>

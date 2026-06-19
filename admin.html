@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>BSK Admin · Управление проектами</title>
+
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="admin">
+
+    <!-- ============== ЭКРАН ВХОДА ============== -->
+    <section class="admin-login" id="adminLogin">
+        <div class="admin-login__card">
+            <div class="admin-login__logo">
+                <svg width="56" height="40" viewBox="0 0 56 40" fill="none">
+                    <path d="M8 4 L28 4 L48 24 L28 36 L8 36 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <text x="28" y="25" text-anchor="middle" font-family="Cormorant Garamond" font-size="14" font-weight="600" fill="currentColor">BSK</text>
+                </svg>
+                <div>
+                    <strong>Capital Group</strong>
+                    <small>ADMIN PANEL</small>
+                </div>
+            </div>
+
+            <h1 class="admin-login__title">Вход в админку</h1>
+            <p class="admin-login__sub">Введите пароль администратора, чтобы управлять проектами</p>
+
+            <form class="admin-login__form" id="loginForm" novalidate>
+                <label class="admin-field">
+                    <span>Пароль</span>
+                    <input type="password" id="loginPassword" autocomplete="current-password" required />
+                </label>
+                <p class="admin-login__error" id="loginError" hidden>Неверный пароль</p>
+                <button type="submit" class="admin-btn admin-btn--primary admin-btn--block">Войти</button>
+            </form>
+
+            <p class="admin-login__hint">
+                По умолчанию пароль: <code>bsk2026</code>.
+                Сменить можно в файле <code>js/admin.js</code> или прямо в админке.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============== ПАНЕЛЬ ============== -->
+    <div class="admin-shell" id="adminShell" hidden>
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar__logo">
+                <svg width="48" height="36" viewBox="0 0 56 40" fill="none">
+                    <path d="M8 4 L28 4 L48 24 L28 36 L8 36 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <text x="28" y="25" text-anchor="middle" font-family="Cormorant Garamond" font-size="14" font-weight="600" fill="currentColor">BSK</text>
+                </svg>
+                <div>
+                    <strong>Capital Group</strong>
+                    <small>Admin</small>
+                </div>
+            </div>
+
+            <nav class="admin-nav">
+                <button class="admin-nav__item is-active" data-view="dashboard">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l2-2 4 4 8-8 4 4"/><path d="M3 18h18"/></svg>
+                    Дашборд
+                </button>
+                <button class="admin-nav__item" data-view="leads">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.12.84.31 1.66.57 2.45a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.79.26 1.61.45 2.45.57A2 2 0 0122 16.92z"/></svg>
+                    Заявки
+                    <span class="admin-nav__badge" id="leadsBadge" hidden>0</span>
+                </button>
+                <button class="admin-nav__item" data-view="list">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                    Проекты
+                </button>
+                <button class="admin-nav__item" data-view="new">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                    Новый проект
+                </button>
+                <button class="admin-nav__item" data-view="data">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                    Экспорт / Импорт
+                </button>
+                <button class="admin-nav__item" data-view="settings">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.4 1.8l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.7 1.7 0 00-1.8-.4 1.7 1.7 0 00-1 1.5V21a2 2 0 01-4 0v-.1a1.7 1.7 0 00-1.1-1.5 1.7 1.7 0 00-1.8.4l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.7 1.7 0 00.4-1.8 1.7 1.7 0 00-1.5-1H3a2 2 0 010-4h.1a1.7 1.7 0 001.5-1.1 1.7 1.7 0 00-.4-1.8l-.1-.1a2 2 0 112.8-2.8l.1.1a1.7 1.7 0 001.8.4H9a1.7 1.7 0 001-1.5V3a2 2 0 014 0v.1a1.7 1.7 0 001 1.5 1.7 1.7 0 001.8-.4l.1-.1a2 2 0 112.8 2.8l-.1.1a1.7 1.7 0 00-.4 1.8V9a1.7 1.7 0 001.5 1H21a2 2 0 010 4h-.1a1.7 1.7 0 00-1.5 1z"/></svg>
+                    Настройки
+                </button>
+            </nav>
+
+            <div class="admin-sidebar__footer">
+                <a class="admin-link" href="index.html" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                    Открыть сайт
+                </a>
+                <button class="admin-link" id="logoutBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+                    Выйти
+                </button>
+            </div>
+        </aside>
+
+        <main class="admin-main">
+
+            <!-- ===== Дашборд ===== -->
+            <section class="admin-view" data-view="dashboard">
+                <header class="admin-view__header">
+                    <div>
+                        <h1>Дашборд</h1>
+                        <p>Сводка по проектам и заявкам</p>
+                    </div>
+                </header>
+
+                <div class="admin-stats" id="dashboardStats"></div>
+
+                <div class="admin-card">
+                    <h3>Последние заявки</h3>
+                    <p>Свежие обращения с сайта. Полный список — во вкладке <strong>Заявки</strong>.</p>
+                    <div class="admin-table admin-table--leads" id="recentLeads"></div>
+                </div>
+            </section>
+
+            <!-- ===== Заявки ===== -->
+            <section class="admin-view" data-view="leads" hidden>
+                <header class="admin-view__header">
+                    <div>
+                        <h1>Заявки</h1>
+                        <p>Обращения клиентов с форм сайта. Всего: <span id="leadsCount">0</span></p>
+                    </div>
+                    <div class="admin-view__actions">
+                        <select id="leadsFilter" class="admin-select">
+                            <option value="">Все статусы</option>
+                            <option value="new">Новые</option>
+                            <option value="in-progress">В обработке</option>
+                            <option value="called">Перезвонили</option>
+                            <option value="closed">Закрытые</option>
+                        </select>
+                        <button class="admin-btn" id="exportLeadsBtn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                            Экспорт в CSV
+                        </button>
+                        <button class="admin-btn admin-btn--danger" id="clearLeadsBtn">Очистить все</button>
+                    </div>
+                </header>
+
+                <div class="admin-table admin-table--leads" id="leadsTable"></div>
+            </section>
+
+            <!-- ===== Список проектов ===== -->
+            <section class="admin-view" data-view="list" hidden>
+                <header class="admin-view__header">
+                    <div>
+                        <h1>Проекты</h1>
+                        <p>Всего: <span id="projectsCount">…</span> · правки сохраняются в браузере</p>
+                    </div>
+                    <button class="admin-btn admin-btn--primary" data-action="new">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                        Новый проект
+                    </button>
+                </header>
+
+                <div class="admin-table" id="projectsTable"></div>
+            </section>
+
+            <!-- ===== Создание/редактирование ===== -->
+            <section class="admin-view" data-view="edit" hidden>
+                <header class="admin-view__header">
+                    <div>
+                        <h1 id="editTitle">Новый проект</h1>
+                        <p>Все обязательные поля помечены <span class="admin-req">*</span></p>
+                    </div>
+                    <div class="admin-view__actions">
+                        <button class="admin-btn" data-action="back">← Назад к списку</button>
+                    </div>
+                </header>
+
+                <form class="admin-form" id="projectForm" novalidate>
+                    <input type="hidden" name="id" />
+
+                    <div class="admin-form__grid">
+
+                        <label class="admin-field">
+                            <span>Название <em>*</em></span>
+                            <input type="text" name="name" required placeholder="ROYAL PARK" />
+                        </label>
+
+                        <label class="admin-field">
+                            <span>ID (slug в URL) <em>*</em></span>
+                            <input type="text" name="id_input" required pattern="[a-z0-9-]+" placeholder="royal-park" />
+                            <small>Только латиница, цифры и дефис. Например: <code>royal-park</code></small>
+                        </label>
+
+                        <label class="admin-field">
+                            <span>Класс</span>
+                            <input type="text" name="class" placeholder="Premium-класс" />
+                        </label>
+
+                        <label class="admin-field">
+                            <span>Статус</span>
+                            <select name="status">
+                                <option value="building">Строится</option>
+                                <option value="done">Сдан</option>
+                            </select>
+                        </label>
+
+                        <label class="admin-field">
+                            <span>Локация (коротко)</span>
+                            <input type="text" name="location" placeholder="Бишкек, ул. Раззакова" />
+                        </label>
+
+                        <label class="admin-field">
+                            <span>Адрес (полный)</span>
+                            <input type="text" name="address" placeholder="г. Бишкек, ул. Раззакова 21" />
+                        </label>
+
+                        <label class="admin-field">
+                            <span>Этажность</span>
+                            <input type="number" name="floors" min="1" max="60" />
+                        </label>
+
+                        <label class="admin-field">
+                            <span>Количество квартир</span>
+                            <input type="number" name="apartments" min="1" />
+                        </label>
+
+                        <label class="admin-field">
+                            <span>Срок сдачи (или год сдачи)</span>
+                            <input type="text" name="deadline" placeholder="2026" />
+                        </label>
+
+                        <label class="admin-field">
+                            <span>Высота потолков</span>
+                            <input type="text" name="ceiling" placeholder="3.2 м" />
+                        </label>
+
+                        <label class="admin-field">
+                            <span>Площадь от, м²</span>
+                            <input type="number" name="areaFrom" min="10" />
+                        </label>
+
+                        <label class="admin-field">
+                            <span>Площадь до, м²</span>
+                            <input type="number" name="areaTo" min="10" />
+                        </label>
+
+                        <label class="admin-field">
+                            <span>Цена от ($/м²)</span>
+                            <input type="number" name="priceFrom" min="0" />
+                        </label>
+
+                        <label class="admin-field admin-field--wide">
+                            <span>Главное изображение (URL)</span>
+                            <input type="url" name="image" placeholder="https://..." />
+                        </label>
+
+                        <label class="admin-field admin-field--wide">
+                            <span>Подзаголовок (для hero)</span>
+                            <input type="text" name="tagline" placeholder="Клубный дом в центре Бишкека" />
+                        </label>
+
+                        <label class="admin-field admin-field--wide">
+                            <span>Описание</span>
+                            <textarea name="description" rows="4" placeholder="Расскажите о проекте подробно..."></textarea>
+                        </label>
+
+                        <label class="admin-field admin-field--wide">
+                            <span>Особенности проекта</span>
+                            <textarea name="highlights" rows="6" placeholder="Каждый пункт с новой строки"></textarea>
+                            <small>Каждую особенность — на отдельной строке</small>
+                        </label>
+
+                        <label class="admin-field admin-field--wide">
+                            <span>Инфраструктура и локация</span>
+                            <textarea name="infrastructure" rows="6" placeholder="Каждый пункт с новой строки"></textarea>
+                        </label>
+
+                        <label class="admin-field admin-field--wide">
+                            <span>Галерея (по одному URL на строку)</span>
+                            <textarea name="gallery" rows="6" placeholder="https://...&#10;https://..."></textarea>
+                        </label>
+                    </div>
+
+                    <div class="admin-form__footer">
+                        <button type="button" class="admin-btn" data-action="back">Отмена</button>
+                        <button type="submit" class="admin-btn admin-btn--primary">Сохранить проект</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- ===== Экспорт / Импорт ===== -->
+            <section class="admin-view" data-view="data" hidden>
+                <header class="admin-view__header">
+                    <div>
+                        <h1>Экспорт и импорт</h1>
+                        <p>Перенос правок между устройствами или на боевой сервер</p>
+                    </div>
+                </header>
+
+                <div class="admin-card">
+                    <h3>Экспортировать в JSON</h3>
+                    <p>Скачайте текущее состояние проектов. Полученный файл можно положить в <code>data/projects.json</code> на сервере — он станет дефолтным набором для всех пользователей.</p>
+                    <div class="admin-form__footer admin-form__footer--left">
+                        <button class="admin-btn admin-btn--primary" id="downloadJson">Скачать projects.json</button>
+                        <button class="admin-btn" id="copyJson">Скопировать в буфер</button>
+                    </div>
+                </div>
+
+                <div class="admin-card">
+                    <h3>Импортировать из JSON</h3>
+                    <p>Загрузите ранее экспортированный файл — он перезапишет текущее состояние.</p>
+                    <input type="file" id="importFile" accept="application/json,.json" hidden />
+                    <div class="admin-form__footer admin-form__footer--left">
+                        <button class="admin-btn" id="importBtn">Выбрать файл…</button>
+                    </div>
+                    <textarea class="admin-textarea" id="importText" placeholder="…или вставьте JSON сюда"></textarea>
+                    <div class="admin-form__footer admin-form__footer--left">
+                        <button class="admin-btn admin-btn--primary" id="importTextBtn">Импортировать из текста</button>
+                    </div>
+                </div>
+
+                <div class="admin-card admin-card--danger">
+                    <h3>Сбросить к заводским</h3>
+                    <p>Удалит локальные изменения и вернёт проекты к содержимому <code>data/projects.json</code>.</p>
+                    <button class="admin-btn admin-btn--danger" id="resetBtn">Сбросить</button>
+                </div>
+            </section>
+
+            <!-- ===== Настройки ===== -->
+            <section class="admin-view" data-view="settings" hidden>
+                <header class="admin-view__header">
+                    <div>
+                        <h1>Настройки</h1>
+                        <p>Пароль администратора и базовые параметры</p>
+                    </div>
+                </header>
+
+                <div class="admin-card">
+                    <h3>Сменить пароль</h3>
+                    <p>Пароль хранится локально в браузере (хешированно). На каждом устройстве можно установить свой.</p>
+                    <form class="admin-form" id="passwordForm">
+                        <div class="admin-form__grid admin-form__grid--narrow">
+                            <label class="admin-field admin-field--wide">
+                                <span>Текущий пароль</span>
+                                <input type="password" name="current" autocomplete="current-password" />
+                                <small>Можно оставить пустым, если используете дефолтный <code>bsk2026</code></small>
+                            </label>
+                            <label class="admin-field">
+                                <span>Новый пароль</span>
+                                <input type="password" name="next" required minlength="4" autocomplete="new-password" />
+                            </label>
+                            <label class="admin-field">
+                                <span>Повторите</span>
+                                <input type="password" name="confirm" required minlength="4" autocomplete="new-password" />
+                            </label>
+                        </div>
+                        <div class="admin-form__footer admin-form__footer--left">
+                            <button type="submit" class="admin-btn admin-btn--primary">Сохранить пароль</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- ===== Toast ===== -->
+    <div class="admin-toast" id="adminToast"></div>
+
+    <script type="module" src="js/admin.js"></script>
+</body>
+</html>

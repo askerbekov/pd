@@ -16,23 +16,29 @@
  *      counter        — анимированный счётчик
  */
 
-import { initPreloader }       from './modules/preloader.js';
-import { initHeader }          from './modules/header.js';
-import { initNavigation }      from './modules/navigation.js';
-import { initHeroSlider }      from './modules/heroSlider.js';
-import { initProjectsFilter }  from './modules/projectsFilter.js';
-import { initModal }           from './modules/modal.js';
-import { initForms }           from './modules/form.js';
+import { initPreloader }        from './modules/preloader.js';
+import { initHeader }           from './modules/header.js';
+import { initNavigation }       from './modules/navigation.js';
+import { initHeroSlider }       from './modules/heroSlider.js';
+import { initProjectsFilter }   from './modules/projectsFilter.js';
+import { initModal }            from './modules/modal.js';
+import { initForms }            from './modules/form.js';
 import { initScrollAnimations } from './modules/scrollAnimations.js';
-import { initCounters }        from './modules/counter.js';
+import { initCounters }         from './modules/counter.js';
+import { renderProjects, initProjectsRender } from './modules/projectsRender.js';
 
 /**
  * Запуск приложения после DOMContentLoaded
  */
-function bootstrap() {
+async function bootstrap() {
     // Год в футере
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Сначала отрисовываем карточки проектов — фильтр и анимации
+    // должны навешиваться уже на готовый DOM.
+    await renderProjects();
+    initProjectsRender();
 
     // Инициализация модулей
     initPreloader();

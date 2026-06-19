@@ -1,7 +1,9 @@
 /**
  * Form — валидация и обработка отправки форм
  * Маска для телефона, кастомные сообщения, toast-уведомления
+ * Каждый submit создаёт заявку в leadsStore (видна в админке).
  */
+import { createLead } from './leadsStore.js';
 
 const PHONE_REGEX = /^\+?[\d\s()-]{10,}$/;
 
@@ -122,7 +124,12 @@ function initForm(form) {
         submitBtn.disabled = true;
 
         try {
-            await new Promise((resolve) => setTimeout(resolve, 900));
+            await new Promise((resolve) => setTimeout(resolve, 600));
+
+            // Сохраняем заявку, чтобы оператор увидел её в админке
+            const source = form.dataset.source || form.id || 'site';
+            createLead({ ...data, source });
+
             console.log('Отправлено:', data);
             showToast('Спасибо! Мы свяжемся с вами в течение 15 минут');
             form.reset();

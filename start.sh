@@ -13,15 +13,21 @@ echo " ============================================================"
 echo ""
 
 PORT=8000
+URL="http://localhost:${PORT}"
+ADMIN_URL="${URL}/admin.html"
 
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 RED='\033[0;31m'
 NC='\033[0m'
 
+printf " ${YELLOW}Сайт:${NC}    ${URL}\n"
+printf " ${YELLOW}Админка:${NC} ${ADMIN_URL}  (пароль по умолчанию: bsk2026)\n\n"
+
 xdg_open_safe() {
     if command -v xdg-open >/dev/null 2>&1; then
-        (sleep 1 && xdg-open "http://localhost:${PORT}") &
+        (sleep 1 && xdg-open "${URL}") &
+        (sleep 2 && xdg-open "${ADMIN_URL}") &
     fi
 }
 
